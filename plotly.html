@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.plotly.com/plotly-2.25.0.min.js"></script>
+</head>
+<body>
+  <div id="chart"></div>
+  <script>
+    const data = [
+      {
+        x: ['January', 'February', 'March', 'April'],
+        y: [10, 15, 13, 17],
+        type: 'bar'
+      }
+    ];
+
+    const layout = {
+      title: 'Monthly Sales',
+      xaxis: { title: 'Month' },
+      yaxis: { title: 'Sales' }
+    };
+
+    Plotly.newPlot('chart', data, layout);
+  </script>
+</body>
+</html>

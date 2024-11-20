@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      const data = google.visualization.arrayToDataTable([
+        ['Month', 'Sales'],
+        ['January', 10],
+        ['February', 15],
+        ['March', 13],
+        ['April', 17]
+      ]);
+
+      const options = {
+        title: 'Monthly Sales',
+        hAxis: { title: 'Month' },
+        vAxis: { title: 'Sales' }
+      };
+
+      const chart = new google.visualization.LineChart(document.getElementById('chart'));
+      chart.draw(data, options);
+    }
+  </script>
+</head>
+<body>
+  <div id="chart" style="width: 600px; height: 400px;"></div>
+</body>
+</html>
